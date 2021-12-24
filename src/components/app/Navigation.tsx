@@ -2,14 +2,17 @@ import React, {useState} from 'react';
 import Paper from '@mui/material/Paper';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import {Cottage, Backpack, Construction} from '@mui/icons-material';
+import {Cottage, Backpack, Celebration} from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 
 const Navigation = () => {
+    const navigate = useNavigate();
     const [value, setValue] = useState('home');
 
     const handleChange = (event: React.SyntheticEvent, newValue: string) => {
         setValue(newValue);
+        navigate(newValue);
       };
 
     return (
@@ -19,11 +22,11 @@ const Navigation = () => {
                 onChange={handleChange}
             >
                 <BottomNavigationAction label="Home" value="home" icon={<Cottage />} />
-                <BottomNavigationAction label="Travel" value="travel" icon={<Backpack />} />
-                <BottomNavigationAction label="Tools" value="tools" icon={<Construction />} />
+                <BottomNavigationAction label="Celebrations" value="celebrations" icon={<Celebration />} />
+                <BottomNavigationAction label="Sack o' Tools" value="tools" icon={<Backpack />} />
             </BottomNavigation>
         </Paper>
-    )
-}
+    );
+};
 
 export default Navigation;
