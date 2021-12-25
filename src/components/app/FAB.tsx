@@ -32,10 +32,10 @@ const FAB = (props: Props) => {
     };
 
     return (
-    <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1 }}>
+    <Box style={{ height: 320, flexGrow: 1 }}>
         <SpeedDial
         ariaLabel="SpeedDial settings"
-        sx={{ position: 'absolute', top: 16, right: 16 }}
+        style={{ position: 'absolute', top: 16, right: 16 }}
         direction='down'
         icon={<Settings />}
         >

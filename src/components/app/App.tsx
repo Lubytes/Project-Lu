@@ -6,7 +6,7 @@ import Home from 'components/routes/Home';
 import PageNotFound from 'components/routes/httpErrors/404';
 import Navigation from 'components/app/Navigation';
 import { Box, Container, PaletteMode, Paper } from '@mui/material';
-import Blog from 'components/routes/Blog';
+import Blog from 'components/routes/blogPosts/Blog';
 import Tools from 'components/routes/Tools';
 import FAB from 'components/app/FAB';
 
@@ -43,7 +43,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container>
-        <Paper elevation={2}>
+        <Paper elevation={2} style={{height: '100%', marginTop: '1em', padding: '1em 0'}}>
           <AppInit />
         </Paper>
       </Container>
